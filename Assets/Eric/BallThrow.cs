@@ -7,6 +7,7 @@ public class BallThrow : MonoBehaviour
     private Rigidbody2D rb2;
     public float tx;
     public float ty;//throwx+y
+    public float scale;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class BallThrow : MonoBehaviour
     private void OnMouseDown()
     {
         rb2.gravityScale = 1;
-        rb2.AddForce(new Vector2(tx, ty));
+
+        rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
     }
 }
