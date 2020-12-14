@@ -21,7 +21,7 @@ public class BallThrow : MonoBehaviour
     {
 
     }
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         rb2.gravityScale = 1;
 
