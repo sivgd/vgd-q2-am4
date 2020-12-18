@@ -5,15 +5,15 @@ using UnityEngine;
 public class BallThrow : MonoBehaviour
 {
     private Rigidbody2D rb2;
-    public float tx;
-    public float ty;//throwx+y
     public float scale;
+    public bool thrown = false;
+    public Vector3 initialPos;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
-        
+        initialPos = transform.position;
     }
 
     // Update is called once per frame
@@ -23,8 +23,23 @@ public class BallThrow : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        rb2.gravityScale = 1;
+        if (thrown == false)
+        {
+            rb2.gravityScale = 1;
 
-        rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+            rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+            thrown = true;
+        };
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag != "Player")
+        {
+            rb2.gravityScale = 0;
+            thrown = false;
+            rb2.velocity = new Vector3(0, 0, 0);
+            transform.position = initialPos;
+        }
     }
 }
