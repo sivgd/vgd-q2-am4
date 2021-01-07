@@ -13,7 +13,7 @@ public class BallThrow : MonoBehaviour
     public bool isBasic = true;
     public bool isMult = false;
     public Vector3 upspeed; //what's upspeed?
-    public Vector3 downspeed; //what's upspeed?
+    public Vector3 downspeed;
 
     // Start is called before the first frame update
     void Start()
@@ -26,31 +26,36 @@ public class BallThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == true)
+        if(GameObject.Find("MultMid").GetComponent<BallThrow>().thrown == false && GameObject.Find("snow").GetComponent<BallThrow>().thrown == false)
         {
-            active = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == false)
-        {
-            active = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == true)
-        {
-            active = true;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == false)
-        {
-            active = false;
+            if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == true)
+            {
+                active = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == false)
+            {
+                active = false;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == true)
+            {
+                active = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == false)
+            {
+                active = false;
+            }
         }
         if (active == false)
         {
             gameObject.layer = 8; //And now, for my disappearing trick!
             col.enabled = false;
+            rb2.simulated = false;
         }
         else
         {
             gameObject.layer = 0; //You've found me!
             col.enabled = true;
+            rb2.simulated = true;
         };
         if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true)
         {
@@ -59,12 +64,19 @@ public class BallThrow : MonoBehaviour
             if(gameObject.name == "MultNord")
             {
                 rb2.AddForce(scale * ((downspeed + Camera.main.ScreenToWorldPoint(Input.mousePosition)) - transform.position));
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().North = false;
             }
             else if(gameObject.name == "MultSud")
             {
                 rb2.AddForce(scale * ((upspeed + Camera.main.ScreenToWorldPoint(Input.mousePosition)) - transform.position));
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().East = false;
             }
-            else
+            else if (gameObject.name == "MultMid")
+            {
+                rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().South = false;
+            }
+            else if (gameObject.name == "snow")
             {
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
             }
@@ -79,6 +91,18 @@ public class BallThrow : MonoBehaviour
             thrown = false;
             rb2.velocity = new Vector3(0, 0, 0);
             transform.position = initialPos;
+            if (gameObject.name == "MultNord")
+            {
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().North = true;
+            }
+            if (gameObject.name == "MultMid")
+            {
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().East = true;
+            }
+            if (gameObject.name == "MultSud")
+            {
+                GameObject.Find("Unity Sucks").GetComponent<Variables>().South = true;
+            }
         }
     }
 }
