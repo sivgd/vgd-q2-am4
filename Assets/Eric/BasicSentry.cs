@@ -15,11 +15,11 @@ public class BasicSentry : MonoBehaviour
     {
         if (basic.GetComponent<BallThrow>().active == true)
         {
-            GetComponent<SpriteRenderer>().sprite = check;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
-            GetComponent<SpriteRenderer>().sprite = cross;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
         }
     }
 }
