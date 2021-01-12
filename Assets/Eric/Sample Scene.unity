@@ -451,6 +451,8 @@ MonoBehaviour:
   isMult: 1
   upspeed: {x: 0, y: 0, z: 0}
   downspeed: {x: 0, y: 0, z: 0}
+  cooldown: 0
+  baseCooldown: 15
 --- !u!212 &402895753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -638,6 +640,8 @@ MonoBehaviour:
   isMult: 1
   upspeed: {x: 0, y: -1, z: 0}
   downspeed: {x: 0, y: 0, z: 0}
+  cooldown: 0
+  baseCooldown: 15
 --- !u!212 &557022945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1137,6 +1141,8 @@ MonoBehaviour:
   isMult: 0
   upspeed: {x: 0, y: 0, z: 0}
   downspeed: {x: 0, y: 0, z: 0}
+  cooldown: 0
+  baseCooldown: 0.1
 --- !u!212 &1172886250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1533,6 +1539,8 @@ MonoBehaviour:
   isMult: 1
   upspeed: {x: 0, y: 0, z: 0}
   downspeed: {x: 0, y: 1, z: 0}
+  cooldown: 0
+  baseCooldown: 15
 --- !u!212 &1365157848
 SpriteRenderer:
   m_ObjectHideFlags: 0

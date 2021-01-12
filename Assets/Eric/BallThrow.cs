@@ -14,6 +14,8 @@ public class BallThrow : MonoBehaviour
     public bool isMult = false;
     public Vector3 upspeed; //what's upspeed?
     public Vector3 downspeed;
+    public float cooldown;
+    public float baseCooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,8 @@ public class BallThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("MultMid").GetComponent<BallThrow>().thrown == false && GameObject.Find("snow").GetComponent<BallThrow>().thrown == false)
+        cooldown -= Time.deltaTime;
+        if (GameObject.Find("MultMid").GetComponent<BallThrow>().thrown == false && GameObject.Find("snow").GetComponent<BallThrow>().thrown == false)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == true)
             {
@@ -57,10 +60,11 @@ public class BallThrow : MonoBehaviour
             col.enabled = true;
             rb2.simulated = true;
         };
-        if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true)
+        if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true && cooldown <= 0)
         {
             rb2.gravityScale = 1;
             thrown = true;
+            cooldown = baseCooldown;
             if(gameObject.name == "MultNord")
             {
                 rb2.AddForce(scale * ((downspeed + Camera.main.ScreenToWorldPoint(Input.mousePosition)) - transform.position));
