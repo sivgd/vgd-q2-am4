@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BasicSentry : MonoBehaviour
 {
-    public Sprite check;
-    public Sprite cross;
     public GameObject basic;
     // Start is called before the first frame update
 

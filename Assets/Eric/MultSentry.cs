@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MultSentry : MonoBehaviour
 {
-    public Sprite check;
-    public Sprite cross;
     public GameObject basic;
     // Start is called before the first frame update
 
@@ -15,11 +13,11 @@ public class MultSentry : MonoBehaviour
     {
         if (basic.GetComponent<BallThrow>().active == true)
         {
-            GetComponent<SpriteRenderer>().sprite = check;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
-            GetComponent<SpriteRenderer>().sprite = cross;
+            GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
         }
     }
 }
