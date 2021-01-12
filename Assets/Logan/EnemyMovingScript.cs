@@ -9,7 +9,8 @@ public class EnemyMovingScript : MonoBehaviour
     Vector3 localScale;
     bool movingLeft = true;
     Rigidbody2D rb2;
-    public GameObject EnemySpawner; 
+    public GameObject EnemySpawner;
+    public Stats player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,16 +28,23 @@ public class EnemyMovingScript : MonoBehaviour
             movingLeft = true;
 
         if (movingLeft)
-            moveLeft();
+            MoveLeft();
 
-            
+        if (transform.position.x < -10)
+        {
+            player.currentHP -= 10;
+            Destroy(gameObject);
+        }
     }
 
-    void moveLeft()
+    void MoveLeft()
     {
         movingLeft = true;
         localScale.x = -1;
         transform.localScale = localScale;
         rb2.velocity = new Vector2(localScale.x * moveSpeed, rb2.velocity.y);
     }
+
+   
+
 }
