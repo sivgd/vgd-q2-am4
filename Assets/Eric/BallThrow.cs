@@ -77,25 +77,27 @@ public class BallThrow : MonoBehaviour
             if(gameObject.name == "MultNord")
             {
                 rb2.AddForce(scale * ((downspeed + Camera.main.ScreenToWorldPoint(Input.mousePosition)) - transform.position));
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().North = false;
+                rb2.AddTorque(-1);
             }
             else if(gameObject.name == "MultSud")
             {
                 rb2.AddForce(scale * ((upspeed + Camera.main.ScreenToWorldPoint(Input.mousePosition)) - transform.position));
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().East = false;
+                rb2.AddTorque(-1);
             }
             else if (gameObject.name == "MultMid")
             {
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().South = false;
+                rb2.AddTorque(-1);
             }
             else if (gameObject.name == "snow")
             {
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+                rb2.AddTorque(-1);
             }
             else if (gameObject.name == "bigSnow(k)")
             {
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+                rb2.AddTorque(-1);
             }
         }
     }
@@ -107,6 +109,7 @@ public class BallThrow : MonoBehaviour
             rb2.gravityScale = 0;
             thrown = false;
             rb2.velocity = new Vector3(0, 0, 0);
+            rb2.angularVelocity = 0;
             transform.position = initialPos;
         }
     }
