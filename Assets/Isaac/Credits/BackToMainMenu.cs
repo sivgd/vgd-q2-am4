@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Monitor : MonoBehaviour
+public class BackToMainMenu : MonoBehaviour
 {
 
     // Use this for initialization
@@ -17,19 +17,6 @@ public class Monitor : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-
-            SceneManager.LoadScene("CreditRoller"); //Requires "Using" (see above)
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-
-            SceneManager.LoadScene("MainLevel1"); //Requires "Using" (see above)
-
-        }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
