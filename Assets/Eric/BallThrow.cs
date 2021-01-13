@@ -12,6 +12,7 @@ public class BallThrow : MonoBehaviour
     public bool active = false;
     public bool isBasic = true;
     public bool isMult = false;
+    public bool isHeav = false;
     public Vector3 upspeed; //what's upspeed?
     public Vector3 downspeed;
     public float cooldown;
@@ -44,6 +45,14 @@ public class BallThrow : MonoBehaviour
                 active = true;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == false)
+            {
+                active = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == true)
+            {
+                active = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == false)
             {
                 active = false;
             }
@@ -84,6 +93,10 @@ public class BallThrow : MonoBehaviour
             {
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
             }
+            else if (gameObject.name == "bigSnow(k)")
+            {
+                rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
+            }
         }
     }
 
@@ -95,18 +108,6 @@ public class BallThrow : MonoBehaviour
             thrown = false;
             rb2.velocity = new Vector3(0, 0, 0);
             transform.position = initialPos;
-            if (gameObject.name == "MultNord")
-            {
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().North = true;
-            }
-            if (gameObject.name == "MultMid")
-            {
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().East = true;
-            }
-            if (gameObject.name == "MultSud")
-            {
-                GameObject.Find("Unity Sucks").GetComponent<Variables>().South = true;
-            }
         }
     }
 }
