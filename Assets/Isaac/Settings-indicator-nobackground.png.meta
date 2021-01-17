@@ -1,18 +1,23 @@
 fileFormatVersion: 2
-guid: 308c0d81f96c14e489300882b8ac9ad1
+guid: 720688cd483a9154eb3d596d68e129cc
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Settings-nobackground 1_0
-    21300002: Settings-nobackground 1_1
-    21300004: Settings-nobackground 1_2
-    21300006: Settings-nobackground 1_3
-    21300008: Settings-nobackground 1_4
-    21300010: Settings-nobackground 1_5
-    21300012: Settings-nobackground 1_6
-    21300014: Settings-nobackground 1_7
-    21300016: Settings-nobackground 1_8
-    21300018: Settings-nobackground 1_9
-    21300020: Settings-nobackground 1_10
+    21300000: Settings-indicator-nobackground_0
+    21300002: Settings-indicator-nobackground_1
+    21300004: Settings-indicator-nobackground_2
+    21300006: Settings-indicator-nobackground_3
+    21300008: Settings-indicator-nobackground_4
+    21300010: Settings-indicator-nobackground_5
+    21300012: Settings-indicator-nobackground_6
+    21300014: Settings-indicator-nobackground_7
+    21300016: Settings-indicator-nobackground_8
+    21300018: Settings-indicator-nobackground_9
+    21300020: Settings-indicator-nobackground_10
+    21300022: Settings-indicator-nobackground_11
+    21300024: Settings-indicator-nobackground_12
+    21300026: Settings-indicator-nobackground_13
+    21300028: Settings-indicator-nobackground_14
+    21300030: Settings-indicator-nobackground_15
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -84,221 +89,321 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Settings-nobackground 1_0
+      name: Settings-indicator-nobackground_0
       rect:
         serializedVersion: 2
-        x: 405
+        x: 202
+        y: 557
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6e3d397bff7f34e9e2bb559078d2b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings-indicator-nobackground_1
+      rect:
+        serializedVersion: 2
+        x: 404
         y: 538
         width: 30
         height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d467630f72088124d98ad31a891c18b6
+      spriteID: 4d69f62f0c4714448aed8879ac00f179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_1
+      name: Settings-indicator-nobackground_2
       rect:
         serializedVersion: 2
-        x: 468
+        x: 467
         y: 538
         width: 21
         height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 300e712023e23b74f9ab7a95aef21a9b
+      spriteID: dfe98487ed979e7428a1a526102ae9e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_2
+      name: Settings-indicator-nobackground_3
       rect:
         serializedVersion: 2
-        x: 490
+        x: 489
         y: 538
         width: 21
         height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05b858a4dc747514ca74d1526200ecd2
+      spriteID: 2f968a4fe386b944e9d69a4099779644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_3
+      name: Settings-indicator-nobackground_4
       rect:
         serializedVersion: 2
-        x: 515
+        x: 514
         y: 572
         width: 10
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80af7028440d5fd4981b6ec3162fe9f1
+      spriteID: a4b1a0e7effb33e4c971dd8a21c2f3d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_4
+      name: Settings-indicator-nobackground_5
       rect:
         serializedVersion: 2
-        x: 439
+        x: 438
         y: 538
         width: 27
         height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bebdd8bdff0d2641b32b5a8148b4ccd
+      spriteID: 55edd5bc880081848acdb5d86c64c622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_5
+      name: Settings-indicator-nobackground_6
       rect:
         serializedVersion: 2
-        x: 511
+        x: 510
         y: 539
         width: 17
         height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d9081eb5e68844eae1374df6a1386a
+      spriteID: 94b9c91a32ee36f43bf1044c3b2a552f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_6
+      name: Settings-indicator-nobackground_7
       rect:
         serializedVersion: 2
-        x: 530
+        x: 529
         y: 539
         width: 35
         height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d881735dc316934797f73621bc22f1f
+      spriteID: f6a78e2f9e682ec4485f918d8e076f10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_7
+      name: Settings-indicator-nobackground_8
       rect:
         serializedVersion: 2
-        x: 567
+        x: 566
         y: 524
         width: 31
         height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b859ba2991f4942a4fa36a676e5541
+      spriteID: d423de2784c91dd429240d4782a840cf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_8
+      name: Settings-indicator-nobackground_9
       rect:
         serializedVersion: 2
-        x: 600
+        x: 599
         y: 538
         width: 22
         height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f300030046103a49bece97134b00997
+      spriteID: 61b3abc861bf22343a68dafce4906abb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_9
+      name: Settings-indicator-nobackground_10
       rect:
         serializedVersion: 2
-        x: 463
+        x: 215
+        y: 500
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535734a4107caeb49b2c46f56c8ce3b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings-indicator-nobackground_11
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 465
+        width: 285
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a50c3372a4ae14bafeb0ac5055a6b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings-indicator-nobackground_12
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 450
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f5143f0dbcf5444be479b316694723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings-indicator-nobackground_13
+      rect:
+        serializedVersion: 2
+        x: 340
         y: 475
-        width: 102
-        height: 23
+        width: 20
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f18bc90ad2992e47bb31d467dfec3f4
+      spriteID: fdebb2cea54fe2044b0a0eb73873f5a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Settings-nobackground 1_10
+      name: Settings-indicator-nobackground_14
       rect:
         serializedVersion: 2
-        x: 480
+        x: 342
         y: 416
-        width: 70
-        height: 23
+        width: 18
+        height: 24
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88378ff6136299446819116e6f6f6eb3
+      spriteID: f9822e7a21e54e3478219be2baeb1f58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Settings-indicator-nobackground_15
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 405
+        width: 285
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08dc6f07da88e945b2fbfc5b34f3bd9
       vertices: []
       indices: 
       edges: []
@@ -306,7 +411,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bc7f4d5e3cf4cca4684272d31920d47e
+    spriteID: e9f3407682583504db0763ca7d427657
     vertices: []
     indices: 
     edges: []
