@@ -1,13 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Stats : MonoBehaviour
+public class DeadzoneDamage : MonoBehaviour
 {
-    public float maxHP;
-    public float currentHP;
-    public Image health;
+    public Stats player;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +15,13 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health.fillAmount = currentHP / maxHP;   
+        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        player.currentHP -= 10;
+        Destroy(collision.gameObject);
+    }
+
 }

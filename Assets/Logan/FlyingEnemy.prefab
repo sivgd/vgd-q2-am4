@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8638136862329764160}
   - component: {fileID: 1718035606718609423}
   - component: {fileID: 5828637565685439705}
+  - component: {fileID: 114344227871785666}
   m_Layer: 0
-  m_Name: Flying Enemy
+  m_Name: FlyingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,3 +119,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114344227871785666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288629337031632069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727217543f7e0ca4ba4672890fd82973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  EnemySpawner: {fileID: 0}
+  player: {fileID: 0}

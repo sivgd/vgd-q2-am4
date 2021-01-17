@@ -10,7 +10,7 @@ public class EnemyMovingScript : MonoBehaviour
     bool movingLeft = true;
     Rigidbody2D rb2;
     public GameObject EnemySpawner;
-    public Stats player;
+    private Stats player;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class EnemyMovingScript : MonoBehaviour
         localScale = transform.localScale;
         rb2 = GetComponent<Rigidbody2D> ();
         EnemyWaypoint = GameObject.Find("EnemyWaypoint").GetComponent<Transform>();
+        player = GameObject.Find("DeadZone").GetComponent<Stats>();
     }
 
     // Update is called once per frame
@@ -30,11 +31,6 @@ public class EnemyMovingScript : MonoBehaviour
         if (movingLeft)
             MoveLeft();
 
-        if (transform.position.x < -10)
-        {
-            player.currentHP -= 10;
-            Destroy(gameObject);
-        }
     }
 
     void MoveLeft()
@@ -44,7 +40,5 @@ public class EnemyMovingScript : MonoBehaviour
         transform.localScale = localScale;
         rb2.velocity = new Vector2(localScale.x * moveSpeed, rb2.velocity.y);
     }
-
-   
 
 }
