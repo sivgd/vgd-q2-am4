@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RollerScript : MonoBehaviour
 {
-    private static int nScreens = 4;
+    private static int nScreens = 5;
     private GameObject[] creditScreens = new GameObject[nScreens];
     private static int swapCount = 0;
 
@@ -17,7 +17,7 @@ public class RollerScript : MonoBehaviour
         creditScreens[1] = GameObject.Find("Credit2");
         creditScreens[2] = GameObject.Find("Credit3");
         creditScreens[3] = GameObject.Find("Credit4");
-        //creditScreens[4] = GameObject.Find("Credit5");
+        creditScreens[4] = GameObject.Find("Credit5");
 
 
         //Turn them all off...
