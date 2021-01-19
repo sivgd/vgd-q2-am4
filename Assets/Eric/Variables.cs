@@ -5,11 +5,7 @@ using UnityEngine;
 public class Variables : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool North = true;
-    public bool East = true;
-    public bool South = true;
-    public bool GoMode = false;
-    public bool StopMode = false;
+    public int killCount = 0;
     void Start()
     {
         

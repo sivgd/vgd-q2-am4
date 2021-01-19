@@ -57,20 +57,23 @@ public class BallThrow : MonoBehaviour
                 active = false;
             }
         }
-        if (active == false)
+        if (active == false | thrown == false)
         {
-            gameObject.layer = 8; //And now, for my disappearing trick!
+            gameObject.layer = 8;
             col.enabled = false;
             rb2.simulated = false;
         }
         else
         {
-            gameObject.layer = 0; //You've found me!
+            gameObject.layer = 0;
             col.enabled = true;
             rb2.simulated = true;
         };
         if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true && cooldown <= 0)
         {
+            gameObject.layer = 0;
+            col.enabled = true;
+            rb2.simulated = true;
             rb2.gravityScale = 1;
             thrown = true;
             cooldown = baseCooldown;
