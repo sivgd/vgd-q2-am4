@@ -10,6 +10,7 @@ public class Stats : MonoBehaviour
     public float currentHP;
     public int killreq;
     public Image health;
+    public int unlock;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +27,8 @@ public class Stats : MonoBehaviour
         }
         else if (GameObject.Find("Unity Sucks").GetComponent<Variables>().killCount >= killreq)
         {
+            PlayerPrefs.SetInt("endless", 1);
             SceneManager.LoadScene("Victory");
-            print("Success!");
         }
 
         health.fillAmount = currentHP / maxHP;   

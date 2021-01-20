@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Variables : MonoBehaviour
+public class Quit : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int killCount = 0;
-    
     void Start()
     {
         
@@ -16,5 +14,10 @@ public class Variables : MonoBehaviour
     void Update()
     {
         
+    }
+    public void QuitGame()
+    {
+        Application.Quit(3);
+        print("quit");
     }
 }
