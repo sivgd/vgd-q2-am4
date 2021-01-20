@@ -19,7 +19,7 @@ public class EnemyMovingScript : MonoBehaviour
         localScale = transform.localScale;
         rb2 = GetComponent<Rigidbody2D> ();
         EnemyWaypoint = GameObject.Find("EnemyWaypoint").GetComponent<Transform>();
-        player = GameObject.Find("DeadZone").GetComponent<Stats>();
+        player = GameObject.Find("Deadzone").GetComponent<Stats>();
     }
 
     // Update is called once per frame

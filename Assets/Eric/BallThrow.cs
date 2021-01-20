@@ -30,32 +30,41 @@ public class BallThrow : MonoBehaviour
     void Update()
     {
         cooldown -= Time.deltaTime;
-        if (GameObject.Find("MultMid").GetComponent<BallThrow>().thrown == false && GameObject.Find("snow").GetComponent<BallThrow>().thrown == false)
+        if (GameObject.Find("MultMid").GetComponent<BallThrow>().thrown == false && GameObject.Find("snow").GetComponent<BallThrow>().thrown == false && GameObject.Find("bigSnow(k)").GetComponent<BallThrow>().thrown == false)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == true)
-            {
-                active = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == false)
+            /*if (cooldown > 0 && isBasic == false)
             {
                 active = false;
+                GameObject.Find("snow").GetComponent<BallThrow>().active = true;
+                print("switch to one");
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == true)
-            {
-                active = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == false)
-            {
-                active = false;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == true)
-            {
-                active = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == false)
-            {
-                active = false;
-            }
+            else
+            {*/
+                if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == true)
+                {
+                    active = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha1) == true && isBasic == false)
+                {
+                    active = false;
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == true)
+                {
+                    active = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2) == true && isMult == false)
+                {
+                    active = false;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == true)
+                {
+                    active = true;
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3) == true && isHeav == false)
+                {
+                    active = false;
+                }
+               //}
         }
         if (active == false | thrown == false)
         {
@@ -69,7 +78,7 @@ public class BallThrow : MonoBehaviour
             col.enabled = true;
             rb2.simulated = true;
         };
-        if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true && cooldown <= 0)
+        if (Input.GetKeyUp(KeyCode.Mouse0) == true && thrown == false && active == true && cooldown < 0)
         {
             gameObject.layer = 0;
             col.enabled = true;
@@ -102,10 +111,27 @@ public class BallThrow : MonoBehaviour
                 rb2.AddForce(scale * (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position));
                 rb2.AddTorque(-1);
             }
+            
+        }
+        if(active == false && thrown == true)
+        {
+            rb2.gravityScale = 0;
+            thrown = false;
+            rb2.velocity = new Vector3(0, 0, 0);
+            rb2.angularVelocity = 0;
+            transform.position = initialPos;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb2.gravityScale = 0;
+        thrown = false;
+        rb2.velocity = new Vector3(0, 0, 0);
+        rb2.angularVelocity = 0;
+        transform.position = initialPos;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         rb2.gravityScale = 0;
         thrown = false;
