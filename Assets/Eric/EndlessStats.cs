@@ -22,12 +22,12 @@ public class EndlessStats : MonoBehaviour
     {
         if (currentHP == 0)
         {
-            SceneManager.LoadScene("LevelScene");
+            SceneManager.LoadScene("GameOver");
         }
         else if (GameObject.Find("Unity Sucks").GetComponent<Variables>().killCount >= killreq)
         {
-            //SceneManager.LoadScene("WinScene");
-            print("Success!");
+            //SceneManager.LoadScene("Victory");
+            //print("Success!");
         }
 
         health.fillAmount = currentHP / maxHP;   
