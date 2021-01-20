@@ -25,5 +25,10 @@ public class ChangeScene : MonoBehaviour
             SceneManager.LoadScene(scene_name);
         }
     }
+    public void QuitGame()
+    {
+        Application.Quit(3);
+        print("quit");
+    }
 
 }

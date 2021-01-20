@@ -7135,7 +7135,7 @@ MonoBehaviour:
   upspeed: {x: 0, y: 0, z: 0}
   downspeed: {x: 0, y: 0, z: 0}
   cooldown: 0
-  baseCooldown: 0
+  baseCooldown: 5
 --- !u!212 &1880303844
 SpriteRenderer:
   m_ObjectHideFlags: 0

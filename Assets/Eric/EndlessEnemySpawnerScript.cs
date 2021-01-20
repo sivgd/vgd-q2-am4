@@ -25,9 +25,9 @@ public class EndlessEnemySpawnerScript : MonoBehaviour
     void Update()
     {
         timeElapsed = Time.time - startTime;
-        if(timeElapsed/60 >= 3.25)
+        if(timeElapsed/60 >= 2)
         {
-            spawnRate = 0.75f;
+            spawnRate = 1f;
         }
         else
         {
@@ -37,7 +37,7 @@ public class EndlessEnemySpawnerScript : MonoBehaviour
         if (Time.time > nextFlyingSpawn)
         {
             nextFlyingSpawn = Time.time + spawnRate;
-            randY = Random.Range(3, -1);
+            randY = Random.Range(3, 0);
             whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(flyingenemy, whereToSpawn, Quaternion.identity);
         }
