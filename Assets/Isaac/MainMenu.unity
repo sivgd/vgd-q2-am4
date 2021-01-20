@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edcb0c748a5d8114fb4cf863dbdcc6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlock: 0
 --- !u!4 &1051276847
 Transform:
   m_ObjectHideFlags: 0
@@ -910,6 +911,7 @@ GameObject:
   - component: {fileID: 1420330918}
   - component: {fileID: 1420330917}
   - component: {fileID: 1420330916}
+  - component: {fileID: 1420330919}
   m_Layer: 5
   m_Name: Endless
   m_TagString: Untagged
@@ -1023,6 +1025,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420330914}
   m_CullTransparentMesh: 0
+--- !u!114 &1420330919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420330914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4662c585154388c4cb04b3082a6a7dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1493827389
 GameObject:
   m_ObjectHideFlags: 0
