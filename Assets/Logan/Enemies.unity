@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyingenemy: {fileID: 2288629337031632069, guid: 06b62714e414648469a7ea4348efd86c,
     type: 3}
-  groundenemy: {fileID: 8303752545681451748, guid: 3f826f5d7dec5f341b80132f37aa659e,
+  groundenemy: {fileID: 5270115715669533635, guid: a1e4e3cd7718a9a429da793f594c6ea6,
     type: 3}
   spawnRate: 2
 --- !u!4 &169030253
@@ -468,6 +468,8 @@ GameObject:
   m_Component:
   - component: {fileID: 902163479}
   - component: {fileID: 902163478}
+  - component: {fileID: 902163481}
+  - component: {fileID: 902163480}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -537,6 +539,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &902163480
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902163477}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &902163481
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902163477}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1114056055
 GameObject:
   m_ObjectHideFlags: 0
