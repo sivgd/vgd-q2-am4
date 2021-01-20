@@ -141,7 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e6c165662652045ba3dfc656682f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2288629337031632069, guid: 06b62714e414648469a7ea4348efd86c, type: 3}
+  flyingenemy: {fileID: 2288629337031632069, guid: 06b62714e414648469a7ea4348efd86c,
+    type: 3}
+  groundenemy: {fileID: 8303752545681451748, guid: 3f826f5d7dec5f341b80132f37aa659e,
+    type: 3}
   spawnRate: 2
 --- !u!4 &169030253
 Transform:
@@ -151,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169030251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 1.76, z: 0}
+  m_LocalPosition: {x: 12, y: 1.76, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -529,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 902163477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 1}
+  m_LocalScale: {x: 30, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -632,11 +635,11 @@ RectTransform:
   m_Father: {fileID: 804859997}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.5, y: 337}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -20}
   m_SizeDelta: {x: 361, y: 41.98175}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1339741710
 MonoBehaviour:
   m_ObjectHideFlags: 0

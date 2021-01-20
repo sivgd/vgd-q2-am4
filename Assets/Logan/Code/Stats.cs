@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentHP == 0)
+        {
+            SceneManager.LoadScene("LevelScene");
+        }
+
         health.fillAmount = currentHP / maxHP;   
     }
 }
