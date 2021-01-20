@@ -10,8 +10,8 @@ public class EnemySpawnerScript : MonoBehaviour
     float randY;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
-    float nextFlyingSpawn = 0.0f;
-    float nextGroundSpawn = 0.0f;
+    public float nextFlyingSpawn = 0.0f;
+    public float nextGroundSpawn = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class EnemySpawnerScript : MonoBehaviour
         if (Time.time > nextFlyingSpawn)
         {
             nextFlyingSpawn = Time.time + spawnRate;
-            randY = Random.Range(5, -1);
+            randY = Random.Range(3, -1);
             whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(flyingenemy, whereToSpawn, Quaternion.identity);
         }
@@ -34,7 +34,7 @@ public class EnemySpawnerScript : MonoBehaviour
         if (Time.time > nextGroundSpawn)
         {
             nextGroundSpawn = Time.time + spawnRate * 2;
-            randY = Random.Range(-2, -3);
+            randY = Random.Range(1, -1);
             whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(groundenemy, whereToSpawn, Quaternion.identity);
         }
