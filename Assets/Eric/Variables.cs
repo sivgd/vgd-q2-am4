@@ -6,6 +6,7 @@ public class Variables : MonoBehaviour
 {
     // Start is called before the first frame update
     public int killCount = 0;
+    
     void Start()
     {
         
