@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
 {
     public float maxHP;
     public float currentHP;
+    public int killreq;
     public Image health;
 
     // Start is called before the first frame update
@@ -22,6 +23,11 @@ public class Stats : MonoBehaviour
         if (currentHP == 0)
         {
             SceneManager.LoadScene("LevelScene");
+        }
+        else if (GameObject.Find("Unity Sucks").GetComponent<Variables>().killCount >= killreq)
+        {
+            //SceneManager.LoadScene("WinScene");
+            print("Success!");
         }
 
         health.fillAmount = currentHP / maxHP;   
