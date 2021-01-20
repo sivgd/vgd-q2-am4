@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Stats : MonoBehaviour
+public class EndlessStats : MonoBehaviour
 {
     public float maxHP;
     public float currentHP;
@@ -26,7 +26,7 @@ public class Stats : MonoBehaviour
         }
         else if (GameObject.Find("Unity Sucks").GetComponent<Variables>().killCount >= killreq)
         {
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("WinScene");
             print("Success!");
         }
 

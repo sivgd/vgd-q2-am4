@@ -500,7 +500,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 398256140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c288b40285da3a4c9b191f0ae730fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 117b818cc1936a24f93cb07339fbb0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 398256142}
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 398256140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768db0e0d4916e84a894c1cc291230f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d9ab52d14643e84c8d0a50182f5c717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
@@ -554,7 +554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398256140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5, y: -2.7209473, z: 0}
+  m_LocalPosition: {x: -8.95, y: -2.7209473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1013,7 +1013,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 610bbc41f62f9dd448b76e35672baa7b, type: 3}
-  m_Color: {r: 0.92156863, g: 0.92156863, b: 0.92156863, a: 1}
+  m_Color: {r: 0.92549026, g: 0.8117648, b: 0.7960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1256,7 +1256,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -14.431076, y: 0.81159544}
+  m_Offset: {x: -14.423527, y: 0.81159544}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1267,7 +1267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0507011, y: 11.297046}
+  m_Size: {x: 1.0657988, y: 11.297046}
   m_EdgeRadius: 0
 --- !u!1 &938841671
 GameObject:
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1291703668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38e6c165662652045ba3dfc656682f17, type: 3}
+  m_Script: {fileID: 11500000, guid: b4e1f08d6daebc54dabdd5e67e04ec83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   flyingenemy: {fileID: 2288629337031632069, guid: 06b62714e414648469a7ea4348efd86c,
@@ -1790,6 +1790,8 @@ MonoBehaviour:
   spawnRate: 2
   nextFlyingSpawn: 0
   nextGroundSpawn: 1
+  startTime: 0
+  timeElapsed: 0
 --- !u!4 &1291703670
 Transform:
   m_ObjectHideFlags: 0
@@ -6698,7 +6700,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 712d7bdd475a44642a04898288be7b75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cfb32a51be2f66d4b81cf9a6f7d3ba74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7133,7 +7135,7 @@ MonoBehaviour:
   upspeed: {x: 0, y: 0, z: 0}
   downspeed: {x: 0, y: 0, z: 0}
   cooldown: 0
-  baseCooldown: 5
+  baseCooldown: 0
 --- !u!212 &1880303844
 SpriteRenderer:
   m_ObjectHideFlags: 0
