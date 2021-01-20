@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Isaac/GameOver.unity
     guid: ada123a85ea5ac34d86482790190e1e4
+  - enabled: 1
+    path: Assets/Isaac/Victory.unity
+    guid: c2858c7061d2bea43b38479870424642
   m_configObjects: {}

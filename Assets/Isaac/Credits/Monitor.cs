@@ -30,6 +30,12 @@ public class Monitor : MonoBehaviour
             SceneManager.LoadScene("MainLevel1"); //Requires "Using" (see above)
 
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+
+            SceneManager.LoadScene("MainLevel2"); //Requires "Using" (see above)
+
+        }
 
         if (Input.GetKeyDown(KeyCode.O))
         {

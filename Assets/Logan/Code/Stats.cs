@@ -22,11 +22,11 @@ public class Stats : MonoBehaviour
     {
         if (currentHP == 0)
         {
-            SceneManager.LoadScene("LevelScene");
+            SceneManager.LoadScene("GameOver");
         }
         else if (GameObject.Find("Unity Sucks").GetComponent<Variables>().killCount >= killreq)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Victory");
             print("Success!");
         }
 

@@ -25,13 +25,13 @@ public class EndlessEnemySpawnerScript : MonoBehaviour
     void Update()
     {
         timeElapsed = Time.time - startTime;
-        if(timeElapsed/45 >= 4.5)
+        if(timeElapsed/60 >= 3.25)
         {
-            spawnRate = 0.5f;
+            spawnRate = 0.75f;
         }
         else
         {
-            spawnRate = 5 - (timeElapsed / 45);
+            spawnRate = 3 - (timeElapsed / 60);
         }
         //print(Time.time);
         if (Time.time > nextFlyingSpawn)
