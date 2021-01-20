@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 73748470}
   - component: {fileID: 73748472}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300028, guid: 42a1303707cbcc34b9fb622150058bf0, type: 3}
+  m_Sprite: {fileID: 21300022, guid: 720688cd483a9154eb3d596d68e129cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -336,7 +336,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Settings
+          m_StringArgument: Controls
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &193033481
